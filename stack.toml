@@ -1,0 +1,33 @@
+id = "com.wilsonfranca.stacks.amazonlinux"
+homepage = "github.com/wilsonrf/amazonlinux-base-stack"
+maintainer = "Wilson da Rocha França"
+
+platforms = ["linux/amd64"]
+
+[build]
+  description = "amazonlinux:al2023"
+  dockerfile = "./build.Dockerfile"
+  gid = 1000
+  shell = "/bin/bash"
+  uid = 1001
+
+  [build.args]
+    
+    packages = """\
+    ca-certificates \
+    findutils \
+    """
+
+[run]
+  description = "amazonlinux:al2023"
+  dockerfile = "./run.Dockerfile"
+  gid = 1000
+  shell = "/bin/bash"
+  uid = 1002
+
+  [run.args]
+
+    packages = """\
+    ca-certificates \
+    findutils \
+    """
