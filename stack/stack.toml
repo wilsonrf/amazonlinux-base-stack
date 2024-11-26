@@ -1,11 +1,11 @@
-id = "com.wilsonfranca.stacks.amazonlinux"
+id = "com.wilsonfranca.stacks.amazonlinux.al2023"
 homepage = "github.com/wilsonrf/amazonlinux-base-stack"
 maintainer = "Wilson da Rocha França"
 
 platforms = ["linux/amd64"]
 
 [build]
-  description = "amazonlinux:al2023"
+  description = "amazonlinux:2023"
   dockerfile = "./build.Dockerfile"
   gid = 1000
   shell = "/bin/bash"
@@ -14,12 +14,13 @@ platforms = ["linux/amd64"]
   [build.args]
     
     packages = """\
+    shadow-utils
     ca-certificates \
-    findutils \
+    findutils
     """
 
 [run]
-  description = "amazonlinux:al2023"
+  description = "amazonlinux:2023"
   dockerfile = "./run.Dockerfile"
   gid = 1000
   shell = "/bin/bash"
@@ -28,6 +29,7 @@ platforms = ["linux/amd64"]
   [run.args]
 
     packages = """\
+    shadow-utils
     ca-certificates \
-    findutils \
+    findutils
     """
