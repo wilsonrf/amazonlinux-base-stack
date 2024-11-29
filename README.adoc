@@ -1,0 +1,8 @@
+:github: https://github.com/wilsonrf/amazonlinux-base-stack
+:registry_build: ghcr.io/wilsonrf/amazonlinux-al2023-build
+:registry_run: ghcr.io/wilsonrf/amazonlinux-al2023-run
+
+= Amazon Linux 2023 Stack
+
+link:{registry_build}[{registry_build}]
+link:{registry_run}[{registry_run}]
